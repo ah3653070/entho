@@ -35,7 +35,7 @@ def in_start(message: Message):
                     text="*🔰 INFORMATION:*\n"
                          f"🔹 _Theme:_ `{themeANDcolor(user_id)['theme'].title()}`\n"
                          f"🔹 _Color:_ `{themeANDcolor(user_id)['color']}`\n"
-                         "🔻 @Haseeb_TG | @Royslbotz\n\n"
+                         "🔻 @Haseeb_TG | @Royalbotz\n💭 support @tgbotschat\n\n"
                          "*SEND YOUR CODE OR CHANGE THEME & COLOR:*",
                     reply_markup=main_menu()
                 )
