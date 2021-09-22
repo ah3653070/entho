@@ -32,10 +32,10 @@ def in_start(message: Message):
             if checker is not None:
                 msg = bot.send_message(
                     chat_id=user_id,
-                    text="*🔺 INFORMATION:*\n"
+                    text="*🔰 INFORMATION:*\n"
                          f"🔹 _Theme:_ `{themeANDcolor(user_id)['theme'].title()}`\n"
                          f"🔹 _Color:_ `{themeANDcolor(user_id)['color']}`\n"
-                         "🔻 @hoosnick | @serenecorp\n\n"
+                         "🔻 @Haseeb_TG | @Royslbotz\n\n"
                          "*SEND YOUR CODE OR CHANGE THEME & COLOR:*",
                     reply_markup=main_menu()
                 )
@@ -51,7 +51,7 @@ def in_text(message: Message, messageID = None):
     """When users write text"""
     user_id = message.from_user.id
     try:
-        if message.text == r"Change Theme & Color 🔵":
+        if message.text == r"Change Theme & Color ⭕":
             bot.delete_message(chat_id=user_id, message_id=message.message_id)
             msg = bot.send_message(chat_id=user_id, text="🔄 Loading...", reply_markup=remove_keyboard())
             bot.send_message(chat_id = user_id, text = "*🔻 Select a theme:*", reply_markup = themes())
@@ -68,7 +68,7 @@ def in_text(message: Message, messageID = None):
                     bot.send_photo(
                         chat_id=user_id,
                         photo=pic,
-                        caption='*💥 @picodebot*',
+                        caption='*@Codepicerbot \nJoin @Royalbotz *',
                         reply_markup=main_menu())
                     bot.delete_message(chat_id=user_id, message_id=msg.message_id)
             else:
@@ -123,7 +123,7 @@ def callback_query(call: CallbackQuery):
             msg = bot.edit_message_text(
                 chat_id=user_id,
                 message_id=call.message.message_id,
-                text="*👨🏻‍💻 SEND YOUR CODE:*",
+                text="*⚡ SEND YOUR CODE:*",
                 reply_markup=None
             )
 
